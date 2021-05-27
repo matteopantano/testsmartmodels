@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$schemaVersion": "0.0.1",
+    "$id": "https://smart-data-models.github.io/dataModel.SmartManufacturing/Material/schema.json",
+    "title": " Smart Data Models - Material",
+    "description": "Material is a product (final or intermediate) or an ingredient of a manufacturing process. Its attributes represent its current state. The state may be physically observed, for instance location, but also process-specific, for instance a result of quality control.",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+        },
+        {
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+        },
+        {
+            "properties": {
+                "status": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "Property. Model:'https://schema.org/URL'. Status of the material at an observed time"
+                }
+            }
+        }
+    ]
+}
